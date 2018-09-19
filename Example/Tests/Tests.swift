@@ -7,7 +7,7 @@ import YKCommonLibrary
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
         describe("these will fail") {
-
+            /*
             it("can do maths") {
                 expect(1) == 2
             }
@@ -18,7 +18,7 @@ class TableOfContentsSpec: QuickSpec {
 
             it("will eventually fail") {
                 expect("time").toEventually( equal("done") )
-            }
+            }*/
             
             context("these will pass") {
 

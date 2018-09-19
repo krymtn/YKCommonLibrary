@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKCommonLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'YKCommonLibrary created by krymtn'
   s.swift_version    = '4.1'
 
@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'YKCommonLibrary/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'YKCommonLibrary' => ['YKCommonLibrary/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'YKCommonLibrary' => ['YKCommonLibrary/Assets/*.xib']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

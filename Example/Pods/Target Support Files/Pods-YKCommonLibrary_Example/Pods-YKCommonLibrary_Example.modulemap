@@ -1,0 +1,6 @@
+framework module Pods_YKCommonLibrary_Example {
+  umbrella header "Pods-YKCommonLibrary_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

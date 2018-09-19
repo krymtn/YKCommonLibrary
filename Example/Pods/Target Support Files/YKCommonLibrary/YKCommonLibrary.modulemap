@@ -1,0 +1,6 @@
+framework module YKCommonLibrary {
+  umbrella header "YKCommonLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

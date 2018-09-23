@@ -1,0 +1,35 @@
+{
+    "thin": {
+        "color": {
+            "text": "DDDDDD"
+        },
+        "shape": {
+            "font": null
+        }
+    },
+    "regular": {
+        "color": {
+            "text": "612345"
+        },
+        "shape": {
+            "font": "Kefa"
+        }
+    },
+    "bold": {
+        "color": {
+            "text": "FFFFFF"
+        },
+        "shape": {
+            "font": null
+        }
+    },
+    "block": {
+        "color": {
+            "background": "000000",
+            "text": "BBBBBB"
+        },
+        "shape": {
+            "font": null
+        }
+    }
+}

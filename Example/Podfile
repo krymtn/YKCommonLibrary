@@ -2,6 +2,8 @@ use_frameworks!
 
 target 'YKCommonLibrary_Example' do
   pod 'YKCommonLibrary', :path => '../'
+  pod 'XCGLogger', '~> 6.0.4'
+  pod 'XCGLogger/UserInfoHelpers'
 
   target 'YKCommonLibrary_Tests' do
     inherit! :search_paths

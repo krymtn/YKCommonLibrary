@@ -7,6 +7,32 @@
 //
 
 import UIKit
+import XCGLogger
+
+public let log: XCGLogger = {
+    let log = XCGLogger.default
+    let emojiLogFormatter = PrePostFixLogFormatter()
+    emojiLogFormatter.apply(prefix: "🗯🗯🗯 ", postfix: " 🗯🗯🗯", to: .verbose)
+    emojiLogFormatter.apply(prefix: "🔹🔹🔹 ", postfix: " 🔹🔹🔹", to: .debug)
+    emojiLogFormatter.apply(prefix: "ℹ️ℹ️ℹ️ ", postfix: " ℹ️ℹ️ℹ️", to: .info)
+    emojiLogFormatter.apply(prefix: "⚠️⚠️⚠️ ", postfix: " ⚠️⚠️⚠️", to: .warning)
+    emojiLogFormatter.apply(prefix: "‼️‼️‼️ ", postfix: " ‼️‼️‼️", to: .error)
+    emojiLogFormatter.apply(prefix: "💣💣💣 ", postfix: " 💣💣💣", to: .severe)
+    log.formatters = [emojiLogFormatter]
+    return log
+}()
+
+extension Tag {
+    static let sensitive = Tag("sensitive")
+    static let ui = Tag("ui")
+    static let data = Tag("data")
+}
+
+// Create custom developers for your logs
+extension Dev {
+    static let krymtn = Dev("krymtn")
+    static let figa = Dev("figa")
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: "YKCommonExample.txt", fileLevel: .verbose)
+        log.verbose("A verbose message, usually useful when working on a specific problem")
+        log.filters = [TagFilter(excludeFrom: [Tag.sensitive, Tag.ui])]
+        log.info("sensitive message from krymtn", userInfo: Dev.krymtn | Tag.sensitive)
+        log.info("info message from ui", userInfo: Dev.krymtn | Tag.ui)
+        log.info("info message from data", userInfo: Dev.krymtn | Tag.data)
+        do {
+            try AppConfigurator().setApp()
+        } catch ConfiguratorError.fileNotFound(let name) { print("\(name) filepath not found")
+        } catch ConfiguratorError.invalidJSON { print("Plz check the JSON in jsonLint")
+        } catch ConfiguratorError.decoderCodingKeyError { print("Check the keys - property")
+        } catch {
+        }
+        print("time to launch")
         return true
     }
 

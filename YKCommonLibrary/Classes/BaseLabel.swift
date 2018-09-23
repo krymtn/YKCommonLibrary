@@ -9,68 +9,80 @@
 import UIKit
 
 /// Thin Label declaration
-class ThinLabel: UILabel, StyleProtocol {
+open class ThinLabel: UILabel, StyleProtocol, CustomizableProtocol {
 
-    var labelFont: UIFont!
+    public var configurator = LabelConfigurator()
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    func appStyling() {
-        labelFont = UIFont.systemFont(ofSize: self.font.pointSize, weight: .thin)
-        self.font = labelFont
-        self.textColor = .gray
+    open func setup() {
+        self.font = configurator.font
+        self.textColor = configurator.textColor
+        self.backgroundColor = configurator.backgroundColor
     }
+
+    open func appStyling() { }
 }
 
 /// Regular Label declaration
-class RegularLabel: UILabel, StyleProtocol {
+open class RegularLabel: UILabel, StyleProtocol {
 
-    var labelFont: UIFont!
+    public var configurator = LabelConfigurator()
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    func appStyling() {
-        labelFont = UIFont.systemFont(ofSize: self.font.pointSize, weight: .regular)
-        self.font = labelFont
-        self.textColor = .darkText
+    open func setup() {
+        self.font = configurator.font
+        self.textColor = configurator.textColor
+        self.backgroundColor = configurator.backgroundColor
     }
+
+    open func appStyling() { }
 }
 
 /// Bold Label declaration
-class BoldLabel: UILabel, StyleProtocol {
+open class BoldLabel: UILabel, StyleProtocol {
 
-    var labelFont: UIFont!
+    public var configurator = LabelConfigurator()
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.appStyling()
+        appStyling()
+        setup()
     }
 
-    func appStyling() {
-        labelFont = UIFont.systemFont(ofSize: self.font.pointSize, weight: .bold)
-        self.font = labelFont
-        self.textColor = .black
+    open func setup() {
+        self.font = configurator.font
+        self.textColor = configurator.textColor
+        self.backgroundColor = configurator.backgroundColor
     }
+
+    open func appStyling() { }
 }
 

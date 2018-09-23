@@ -8,22 +8,23 @@
 
 import UIKit
 
-class BaseView: UIView {
-    var view: UIView!
+open class BaseView: UIView, CustomizableProtocol {
+    public var view: UIView!
     var nibName: String = String()
     var didSetup = false
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        appStyling()
     }
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
         appStyling()
     }
 
-    func setup() {
+    open func setup() {
         view = loadViewFromNib()
         view.frame = self.bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
@@ -31,13 +32,13 @@ class BaseView: UIView {
         didSetup = true
     }
 
-    func appStyling() {self.view.backgroundColor = .purple}
+    open func appStyling() { self.view.backgroundColor = .purple }
 
-    func createNibName() -> String {
+    open func createNibName() -> String {
         return String(describing: type(of: self))
     }
 
-    func loadViewFromNib() -> UIView {
+    public func loadViewFromNib() -> UIView {
         // grabs the appropriate bundle
         nibName = self.createNibName()
         print("nib", nibName)

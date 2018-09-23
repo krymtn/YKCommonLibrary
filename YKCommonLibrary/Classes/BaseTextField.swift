@@ -8,14 +8,25 @@
 
 import UIKit
 
-class BaseTextField: UITextField {
+open class BaseTextField: UITextField, StyleProtocol, CustomizableProtocol {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    public var configurator = TextFieldConfigurator()
+
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        appStyling()
+        setup()
     }
-    */
 
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        appStyling()
+        setup()
+    }
+
+    open func setup() {
+        self.textColor = configurator.textColor
+        self.backgroundColor = configurator.backgroundColor
+    }
+    open func appStyling() { }
 }

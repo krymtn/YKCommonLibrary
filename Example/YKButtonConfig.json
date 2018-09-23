@@ -1,0 +1,11 @@
+{
+    "color": {
+        "background": "F39203",
+        "text": "000000",
+        "border": null
+    },
+    "shape": {
+        "borderWidth": 2.0,
+        "cornerRadius": 7.5
+    }
+}

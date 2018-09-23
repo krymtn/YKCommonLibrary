@@ -1,8 +1,9 @@
 {
   "name": "YKCommonLibrary",
-  "version": "0.1.0",
-  "summary": "A short description of YKCommonLibrary.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.1.1",
+  "summary": "YKCommonLibrary created by krymtn",
+  "swift_version": "4.1",
+  "description": "A short description of YKCommonLibrary.A short description of YKCommonLibrary.A short description of YKCommonLibrary.",
   "homepage": "https://github.com/krymtn/YKCommonLibrary",
   "license": {
     "type": "MIT",
@@ -13,10 +14,15 @@
   },
   "source": {
     "git": "https://github.com/krymtn/YKCommonLibrary.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "YKCommonLibrary/Classes/**/*"
+  "source_files": "YKCommonLibrary/Classes/**/*",
+  "resource_bundles": {
+    "YKCommonLibrary": [
+      "YKCommonLibrary/Assets/*.xib"
+    ]
+  }
 }

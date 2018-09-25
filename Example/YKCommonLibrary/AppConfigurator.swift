@@ -15,18 +15,23 @@ enum ConfiguratorError: Error {
     case decoderCodingKeyError
 }
 
+enum ConfigJSONFiles: String {
+    case button = "YKButtonConfig"
+    case label = "YKLabelConfig"
+}
+
 class AppConfigurator {
 
     var BUTTONCONFIG: BaseButtonConfigurator!
-    var LABELCONFIG: LabelConfigurator!
+    var LABELCONFIG: LabelConfigurators!
 
     func setApp() throws { // throws error
         do {
-            let buttonData = try configuratorData(fileName: "YButtonConfig")
+            let buttonData = try configuratorData(fileName: ConfigJSONFiles.button.rawValue)
             BUTTONCONFIG   = try decode(modelType: BaseButtonConfigurator.self, data: buttonData)
 
-            let labelData = try configuratorData(fileName: "YKLabelConfig")
-            LABELCONFIG   = try decode(modelType: LabelConfigurator.self, data: labelData)
+            let labelData = try configuratorData(fileName: ConfigJSONFiles.label.rawValue)
+            LABELCONFIG   = try decode(modelType: LabelConfigurators.self, data: labelData)
         }
     }
 }

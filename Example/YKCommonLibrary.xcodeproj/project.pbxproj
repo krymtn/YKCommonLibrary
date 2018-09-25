@@ -17,6 +17,7 @@
 		9591A27C7F2AC13BF7581BAC /* Pods_YKCommonLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DFF35AFB6A4C06FF7D801C /* Pods_YKCommonLibrary_Tests.framework */; };
 		FA09E94E2153831F00A87FC2 /* BaseViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77F44C215375D100E81DB5 /* BaseViewTests.swift */; };
 		FA16F341215644050051154B /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE773582155C121009EFB13 /* AppConfigurator.swift */; };
+		FA43A92A215A57EB00407391 /* ConfigurationJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43A929215A57EB00407391 /* ConfigurationJSONTests.swift */; };
 		FA51FE042153F171004E9970 /* YKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBCB2621537C3E000E7209 /* YKBaseView.swift */; };
 		FA51FE052153F24A004E9970 /* YKBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABBCB2821537CBA000E7209 /* YKBaseView.xib */; };
 		FA51FE0D2154192B004E9970 /* ConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51FE0C2154192B004E9970 /* ConfiguratorTests.swift */; };
@@ -68,6 +69,7 @@
 		AEFC0A403D51D9390967D1E4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B90DF638E56EEC78F4E11315 /* YKCommonLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YKCommonLibrary.podspec; path = ../YKCommonLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FA3C8659215258BB00727908 /* BaseButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonTests.swift; sourceTree = "<group>"; };
+		FA43A929215A57EB00407391 /* ConfigurationJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationJSONTests.swift; sourceTree = "<group>"; };
 		FA51FE0C2154192B004E9970 /* ConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorTests.swift; sourceTree = "<group>"; };
 		FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKButtonConfig.json; sourceTree = SOURCE_ROOT; };
 		FA5A200921551AB2006D1392 /* YKLabelConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKLabelConfig.json; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				FA3C8659215258BB00727908 /* BaseButtonTests.swift */,
 				FA77F44C215375D100E81DB5 /* BaseViewTests.swift */,
 				FA51FE0C2154192B004E9970 /* ConfiguratorTests.swift */,
+				FA43A929215A57EB00407391 /* ConfigurationJSONTests.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -461,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA43A92A215A57EB00407391 /* ConfigurationJSONTests.swift in Sources */,
 				FA16F341215644050051154B /* AppConfigurator.swift in Sources */,
 				FAE7735B2155C14A009EFB13 /* AppConfiguratorTests.swift in Sources */,
 				FA91A6022152596500FDA55B /* BaseButtonTests.swift in Sources */,

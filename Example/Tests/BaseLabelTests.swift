@@ -16,53 +16,56 @@ class BaseLabelTests: QuickSpec {
     override func spec() {
 
         describe("ThinLabel") {
-            var thinLabel: ThinLabel!
-            var dummyFont: UIFont!
-            beforeEach {
-                thinLabel = ThinLabel.init(frame: .zero)
-                dummyFont  = UIFont.systemFont(ofSize: 14.0, weight: .thin)
-            }
-            context("check the default properties", {
+            context("label allocated without json", {
+                var defaultThinLabel: ThinLabel!
+                var dummyFont: UIFont!
+                beforeEach {
+                    defaultThinLabel = ThinLabel.init(frame: .zero)
+                    dummyFont  = UIFont.systemFont(ofSize: 14.0, weight: .thin)
+                }
                 it("Font should be systemfont") {
-                    expect(thinLabel.font).to(equal(dummyFont), description: "Font is not thin!")
+                    expect(defaultThinLabel.font).to(equal(dummyFont), description: "Font error!")
                 }
                 it("Color should be darkText") {
-                    expect(thinLabel.textColor).to(equal(.darkText), description: "Font default text is .gray!!")
+                    expect(defaultThinLabel.textColor).to(equal(.white), description: "TextColor error")
                 }
             })
+
         }
 
         describe("RegularLabel") {
-            var regularLabel: RegularLabel!
-            var dummyFont: UIFont!
-            beforeEach {
-                regularLabel = RegularLabel.init(frame: .zero)
-                dummyFont  = UIFont.systemFont(ofSize: 14, weight: .regular)
-            }
-            context("check the default properties", {
+            context("label allocated without json", {
+                var defaultRegularLabel: RegularLabel!
+                var dummyFont: UIFont!
+                beforeEach {
+                    defaultRegularLabel = RegularLabel.init(frame: .zero)
+                    dummyFont  = UIFont.systemFont(ofSize: 14, weight: .regular)
+                }
                 it("Font should be systemfont") {
-                    expect(regularLabel.font).to(equal(dummyFont), description: "Font is not regular!")
+                    expect(defaultRegularLabel.font).to(equal(dummyFont), description: "Font is not regular!")
                 }
                 it("Color should be darkText") {
-                    expect(regularLabel.textColor).to(equal(.darkText), description: "Font default text is dark!!")
+                    expect(defaultRegularLabel.textColor).to(equal(.white), description: "Font default text is dark!!")
                 }
             })
         }
 
         describe("BolLabel") {
-            var boldLabel: BoldLabel!
-            var dummyFont: UIFont!
-            beforeEach {
-                boldLabel = BoldLabel.init(frame: .zero)
-                dummyFont  = UIFont.systemFont(ofSize: 14, weight: .bold)
-            }
-            context("check the default properties", {
-                it("Font should be systemfont") {
-                    expect(boldLabel.font).to(equal(dummyFont), description: "Font is not bold!")
+            context("label allocated without json", {
+                var defaultBoldLabel: BoldLabel!
+                var dummyFont: UIFont!
+                beforeEach {
+                    defaultBoldLabel = BoldLabel.init(frame: .zero)
+                    dummyFont  = UIFont.systemFont(ofSize: 14, weight: .bold)
                 }
-                it("Color should be darkText") {
-                    expect(boldLabel.textColor).to(equal(.black), description: "Font default text is black!!")
-                }
+                context("check the default properties", {
+                    it("Font should be systemfont") {
+                        expect(defaultBoldLabel.font).to(equal(dummyFont), description: "Font is not bold!")
+                    }
+                    it("Color should be darkText") {
+                        expect(defaultBoldLabel.textColor).to(equal(.white), description: "Font default text is black!!")
+                    }
+                })
             })
         }
     }

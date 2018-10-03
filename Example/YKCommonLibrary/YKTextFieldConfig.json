@@ -1,9 +1,13 @@
 {
     "color": {
-        "background": "000000",
-        "text": "DDDDDD"
+        "background": "FFFFFF",
+        "text": "555555",
+        "placeholder": "111111",
+        "border": "GGGGGG"
     },
     "shape": {
-        "font": null
+        "font": null,
+        "borderWidth": 4,
+        "cornerRadius": 5
     }
 }

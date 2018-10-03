@@ -14,14 +14,40 @@ import YKCommonLibrary
 
 class BaseButtonTests: QuickSpec {
 
+    func decode<T>(modelType: T.Type, data: Data) throws -> T where T : Decodable {
+        guard let myStruct = try? JSONDecoder().decode(modelType, from: data) else {
+            throw ConfiguratorError.decoderCodingKeyError
+        }
+        return myStruct
+    }
+
     override func spec() {
-        describe("Borderline button") {
-            var borderlineButton: YKBaseButton!
-            beforeEach { borderlineButton = YKBaseButton.init(frame: .zero) }
-            context("Check the values if button is initilized", {
-                it("bordercolor should be white") {
-                    expect(borderlineButton.layer.borderColor).to(equal(UIColor.white.cgColor))
+        describe("Button") {
+            context("button allocated without json", {
+                var defaultButton: YKBaseButton!
+                let defaultConfigurator = BaseButtonConfigurator()
+                beforeEach {
+                    defaultButton = YKBaseButton.init(frame: .zero)
                 }
+                it("bordercolor should be white") {
+                  expect(defaultButton.layer.borderColor).to(equal(defaultConfigurator.borderColor.cgColor))
+                }
+            })
+            context("button allocated local json", {
+                var buttonConfigPath: String?
+                var buttonConfigData: Data?
+                var customButton: YKBaseButton!
+                var configurator: BaseButtonConfigurator!
+                beforeEach {
+                    buttonConfigPath = Bundle.main.path(forResource: ConfigJSONFiles.button.rawValue, ofType: "json")!
+                    buttonConfigData = try! Data(contentsOf: URL(fileURLWithPath: buttonConfigPath!))
+                    configurator = try! self.decode(modelType: BaseButtonConfigurator.self, data: buttonConfigData!)
+                    customButton = YKBaseButton.init(frame: .zero, config: configurator)
+                }
+                it("border color", closure: {
+                    expect(customButton.layer.borderColor).to(equal(configurator.borderColor.cgColor))
+                })
+
             })
         }
     }

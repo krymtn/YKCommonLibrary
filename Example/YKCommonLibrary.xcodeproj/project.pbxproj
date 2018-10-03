@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		310C28A359B7CFA1C73868B0 /* Pods_YKCommonLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33750133271BA72BB78987D0 /* Pods_YKCommonLibrary_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,6 +27,12 @@
 		FA5A201321555C25006D1392 /* YKTextFieldConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5A201221555C25006D1392 /* YKTextFieldConfig.json */; };
 		FA5A201621555C8C006D1392 /* YKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A201521555C8C006D1392 /* YKTextField.swift */; };
 		FA5A2018215563A1006D1392 /* YKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A201521555C8C006D1392 /* YKTextField.swift */; };
+		FA5D8C262163947000DB5006 /* SplashJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5D8C252163947000DB5006 /* SplashJSON.json */; };
+		FA5D8C292163949800DB5006 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8C282163949800DB5006 /* Splash.swift */; };
+		FA5D8C2B216394A500DB5006 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8C2A216394A500DB5006 /* SplashViewModel.swift */; };
+		FA5D8C2F2163A8A500DB5006 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8C2E2163A8A500DB5006 /* SplashView.swift */; };
+		FA5D8C312163A8AF00DB5006 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5D8C302163A8AF00DB5006 /* SplashView.xib */; };
+		FA5D8C342163ADA000DB5006 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D8C332163ADA000DB5006 /* SplashVC.swift */; };
 		FA802F9C21538D2200B4A21F /* YKBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F9B21538D2200B4A21F /* YKBaseButton.swift */; };
 		FA91A6022152596500FDA55B /* BaseButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C8659215258BB00727908 /* BaseButtonTests.swift */; };
 		FA91A60421525C0F00FDA55B /* BaseLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91A60321525C0F00FDA55B /* BaseLabelTests.swift */; };
@@ -57,7 +62,6 @@
 		607FACD01AFB9204008FA782 /* YKCommonLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKCommonLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -71,12 +75,18 @@
 		FA3C8659215258BB00727908 /* BaseButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonTests.swift; sourceTree = "<group>"; };
 		FA43A929215A57EB00407391 /* ConfigurationJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationJSONTests.swift; sourceTree = "<group>"; };
 		FA51FE0C2154192B004E9970 /* ConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguratorTests.swift; sourceTree = "<group>"; };
-		FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKButtonConfig.json; sourceTree = SOURCE_ROOT; };
+		FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = YKButtonConfig.json; path = YKCommonLibrary/YKButtonConfig.json; sourceTree = SOURCE_ROOT; };
 		FA5A200921551AB2006D1392 /* YKLabelConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKLabelConfig.json; sourceTree = "<group>"; };
 		FA5A200C215523CE006D1392 /* YKBaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseLabel.swift; sourceTree = "<group>"; };
 		FA5A200E2155516C006D1392 /* BaseTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFieldTests.swift; sourceTree = "<group>"; };
 		FA5A201221555C25006D1392 /* YKTextFieldConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKTextFieldConfig.json; sourceTree = "<group>"; };
 		FA5A201521555C8C006D1392 /* YKTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKTextField.swift; sourceTree = "<group>"; };
+		FA5D8C252163947000DB5006 /* SplashJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SplashJSON.json; sourceTree = "<group>"; };
+		FA5D8C282163949800DB5006 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		FA5D8C2A216394A500DB5006 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		FA5D8C2E2163A8A500DB5006 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FA5D8C302163A8AF00DB5006 /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		FA5D8C332163ADA000DB5006 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		FA77F44C215375D100E81DB5 /* BaseViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTests.swift; sourceTree = "<group>"; };
 		FA802F9B21538D2200B4A21F /* YKBaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseButton.swift; sourceTree = "<group>"; };
 		FA91A60321525C0F00FDA55B /* BaseLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabelTests.swift; sourceTree = "<group>"; };
@@ -139,6 +149,9 @@
 		607FACD21AFB9204008FA782 /* Example for YKCommonLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D8C322163AD8100DB5006 /* Controllers */,
+				FA5D8C2C2163A88800DB5006 /* Views */,
+				FA5D8C272163948200DB5006 /* Models */,
 				FA5A201421555C6B006D1392 /* YKTextField */,
 				FA5A200B215523A6006D1392 /* YKBaseLabel */,
 				FA51FE0E215419BC004E9970 /* ConfigFiles */,
@@ -146,7 +159,6 @@
 				FABBCB2521537BFD000E7209 /* YKBaseView */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				FAE773582155C121009EFB13 /* AppConfigurator.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -212,9 +224,8 @@
 		FA51FE0E215419BC004E9970 /* ConfigFiles */ = {
 			isa = PBXGroup;
 			children = (
-				FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */,
-				FA5A200921551AB2006D1392 /* YKLabelConfig.json */,
-				FA5A201221555C25006D1392 /* YKTextFieldConfig.json */,
+				FA5D8C232163908300DB5006 /* Module */,
+				FA5D8C222163907900DB5006 /* UI */,
 			);
 			name = ConfigFiles;
 			sourceTree = "<group>";
@@ -233,6 +244,58 @@
 				FA5A201521555C8C006D1392 /* YKTextField.swift */,
 			);
 			name = YKTextField;
+			sourceTree = "<group>";
+		};
+		FA5D8C222163907900DB5006 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */,
+				FA5A200921551AB2006D1392 /* YKLabelConfig.json */,
+				FA5A201221555C25006D1392 /* YKTextFieldConfig.json */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FA5D8C232163908300DB5006 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D8C252163947000DB5006 /* SplashJSON.json */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		FA5D8C272163948200DB5006 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D8C282163949800DB5006 /* Splash.swift */,
+				FA5D8C2A216394A500DB5006 /* SplashViewModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FA5D8C2C2163A88800DB5006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D8C2D2163A88F00DB5006 /* Splash */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FA5D8C2D2163A88F00DB5006 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D8C2E2163A8A500DB5006 /* SplashView.swift */,
+				FA5D8C302163A8AF00DB5006 /* SplashView.xib */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		FA5D8C322163AD8100DB5006 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D8C332163ADA000DB5006 /* SplashVC.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		FA802F9A21538D1000B4A21F /* YKBaseButton */ = {
@@ -341,12 +404,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				FA5D8C312163A8AF00DB5006 /* SplashView.xib in Resources */,
 				FA5A201321555C25006D1392 /* YKTextFieldConfig.json in Resources */,
 				FA51FE1021541A0A004E9970 /* YKButtonConfig.json in Resources */,
 				FABBCB2921537CBA000E7209 /* YKBaseView.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				FA5A200A21551AB2006D1392 /* YKLabelConfig.json in Resources */,
+				FA5D8C262163947000DB5006 /* SplashJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,10 +516,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE773592155C121009EFB13 /* AppConfigurator.swift in Sources */,
+				FA5D8C342163ADA000DB5006 /* SplashVC.swift in Sources */,
 				FA5A200D215523CE006D1392 /* YKBaseLabel.swift in Sources */,
+				FA5D8C292163949800DB5006 /* Splash.swift in Sources */,
+				FA5D8C2B216394A500DB5006 /* SplashViewModel.swift in Sources */,
 				FA802F9C21538D2200B4A21F /* YKBaseButton.swift in Sources */,
 				FABBCB2721537C3E000E7209 /* YKBaseView.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				FA5D8C2F2163A8A500DB5006 /* SplashView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				FA5A201621555C8C006D1392 /* YKTextField.swift in Sources */,
 			);

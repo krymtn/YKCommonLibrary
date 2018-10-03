@@ -2,7 +2,7 @@
     "color": {
         "background": "F39203",
         "text": "000000",
-        "border": null
+        "border": "555555"
     },
     "shape": {
         "borderWidth": 2.0,

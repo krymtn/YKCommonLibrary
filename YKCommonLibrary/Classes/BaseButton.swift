@@ -16,7 +16,7 @@ public enum BaseButtonType {
 
 //typealias BaseButtonProperties = (bgColor: UIColor, textColor: UIColor, borderColor: CGColor, borderWidth: CGFloat)
 
-open class BaseButton: UIButton, StyleProtocol, CustomizableProtocol {
+open class BaseButton: UIButton, CustomizableProtocol {
 
     public var configurator = BaseButtonConfigurator()
 
@@ -26,8 +26,9 @@ open class BaseButton: UIButton, StyleProtocol, CustomizableProtocol {
         setup()
     }
     
-    public override init(frame: CGRect) {
+    public init(frame: CGRect, config: BaseButtonConfigurator = BaseButtonConfigurator()) {
         super.init(frame: frame)
+        configurator = config
         appStyling()
         setup()
     }

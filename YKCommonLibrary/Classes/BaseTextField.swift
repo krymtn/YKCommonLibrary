@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BaseTextField: UITextField, StyleProtocol, CustomizableProtocol {
+open class BaseTextField: UITextField, CustomizableProtocol {
 
     public var configurator = TextFieldConfigurator()
 
@@ -25,8 +25,14 @@ open class BaseTextField: UITextField, StyleProtocol, CustomizableProtocol {
     }
 
     open func setup() {
+        
         self.textColor = configurator.textColor
         self.backgroundColor = configurator.backgroundColor
+
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = configurator.cornerRadius
+        self.layer.borderWidth = configurator.borderWidth
+        self.layer.borderColor = configurator.borderColor.cgColor
     }
     open func appStyling() { }
 }

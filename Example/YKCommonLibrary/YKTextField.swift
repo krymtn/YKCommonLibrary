@@ -12,9 +12,6 @@ import YKCommonLibrary
 class YKTextField: BaseTextField {
     
     override func appStyling() {
-        let path : String = Bundle.main.path(forResource: "YKTextFieldConfig", ofType: "json")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-        let configurator = try! JSONDecoder().decode(TextFieldConfigurator.self, from: data)
-        self.configurator = configurator
+        self.configurator = AppConfigurator.shared.TEXTFIELDCONFIG
     }
 }

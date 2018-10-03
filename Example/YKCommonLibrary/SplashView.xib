@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashView" customModule="YKCommonLibrary_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="RHW-q5-8Ea" id="VV0-66-Jnh"/>
+                <outlet property="appIconImageView" destination="PvN-di-KrQ" id="kcu-Nw-RPz"/>
+                <outlet property="textLabel" destination="pIE-OI-F5O" id="l6J-g8-Gqq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PvN-di-KrQ">
+                    <rect key="frame" x="115" y="137" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="L0W-ee-xgK"/>
+                        <constraint firstAttribute="height" constant="90" id="xe6-I5-ke6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIE-OI-F5O" customClass="YKBoldLabel" customModule="YKCommonLibrary_Example" customModuleProvider="target">
+                    <rect key="frame" x="40" y="274" width="240" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="JhK-pX-tHe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RHW-q5-8Ea">
+                    <rect key="frame" x="150" y="348" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="1GU-Om-uWH"/>
+                        <constraint firstAttribute="width" constant="20" id="igy-no-erj"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PvN-di-KrQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="117" id="1GX-3J-MHg"/>
+                <constraint firstItem="pIE-OI-F5O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2EF-Cs-v3V"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pIE-OI-F5O" secondAttribute="trailing" constant="40" id="2e7-8y-GlD"/>
+                <constraint firstItem="PvN-di-KrQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8ep-6X-xgx"/>
+                <constraint firstItem="pIE-OI-F5O" firstAttribute="top" secondItem="PvN-di-KrQ" secondAttribute="bottom" constant="47" id="BQe-rk-h8r"/>
+                <constraint firstItem="pIE-OI-F5O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="auw-gr-m5d"/>
+                <constraint firstItem="RHW-q5-8Ea" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f8h-Zu-m4G"/>
+                <constraint firstItem="RHW-q5-8Ea" firstAttribute="top" secondItem="pIE-OI-F5O" secondAttribute="bottom" constant="53" id="sQd-Gp-oDh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-81" y="9"/>
+        </view>
+    </objects>
+</document>

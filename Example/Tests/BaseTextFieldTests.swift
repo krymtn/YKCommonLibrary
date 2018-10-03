@@ -17,13 +17,13 @@ class BaseTextFieldTests: QuickSpec {
 
         describe("Declare TextField without any configuration json") {
             var ykTextField: YKTextField!
+            let defaultConfigurator = TextFieldConfigurator()
             beforeEach {
                 ykTextField = YKTextField.init(frame: .zero)
             }
-
             context("Check the values", {
                 it("Textfield backgroundcolor") {
-                    expect(ykTextField.backgroundColor).to(equal("000000".UIColor))
+                    expect(ykTextField.backgroundColor).to(equal(defaultConfigurator.backgroundColor))
                 }
             })
 

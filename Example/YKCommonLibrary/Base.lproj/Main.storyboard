@@ -1,65 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SplashVC-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="YKCommonLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="SplashVC" customModule="YKCommonLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-ei-jg5" customClass="YKBaseButton" customModule="YKCommonLibrary_Example" customModuleProvider="target">
-                                <rect key="frame" x="87" y="303" width="200" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="PJH-3A-mQc"/>
-                                    <constraint firstAttribute="height" constant="60" id="g2t-9E-S8Q"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trI-Qn-Jii" customClass="YKRegularLabel" customModule="YKCommonLibrary_Example" customModuleProvider="target">
-                                <rect key="frame" x="91" y="175" width="192" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="2h0-Ag-Tx6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5n-HH-yk4" customClass="YKBlockLabel" customModule="YKCommonLibrary_Example" customModuleProvider="target">
-                                <rect key="frame" x="91" y="607" width="192" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="eo4-ZP-sMP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-uT-alM" customClass="SplashView" customModule="YKCommonLibrary_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FGv-ei-jg5" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="CzT-cE-7XU"/>
-                            <constraint firstAttribute="trailing" secondItem="trI-Qn-Jii" secondAttribute="trailing" constant="92" id="Gdb-m6-8m8"/>
-                            <constraint firstAttribute="trailing" secondItem="U5n-HH-yk4" secondAttribute="trailing" constant="92" id="IQc-LT-qoo"/>
-                            <constraint firstItem="U5n-HH-yk4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="91" id="JBl-z3-Rik"/>
-                            <constraint firstItem="trI-Qn-Jii" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="155" id="O4g-ga-1At"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="U5n-HH-yk4" secondAttribute="bottom" constant="20" id="Q67-rk-Rpl"/>
-                            <constraint firstItem="FGv-ei-jg5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hFh-tU-cjU"/>
-                            <constraint firstItem="trI-Qn-Jii" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="91" id="zK2-f9-nKr"/>
+                            <constraint firstItem="BjA-uT-alM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="dVM-Zc-AkM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BjA-uT-alM" secondAttribute="trailing" constant="-16" id="jAP-B6-7Gz"/>
+                            <constraint firstItem="BjA-uT-alM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="lyN-Sg-2D3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BjA-uT-alM" secondAttribute="bottom" id="tHT-Iz-Ojj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="splashView" destination="BjA-uT-alM" id="vv4-6d-xop"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

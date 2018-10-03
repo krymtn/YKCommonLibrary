@@ -7,15 +7,18 @@
 
 import Foundation
 
+public protocol UIConfigElements {
+    var BUTTONCONFIG: BaseButtonConfigurator! { get set }
+    var LABELCONFIG: LabelConfigurators! { get set }
+    var TEXTFIELDCONFIG: TextFieldConfigurator! { get set }
+}
+
 open class BaseUIConfigurator: Decodable {
 
     public var color: ColorConfigurator?
     public var shape: ShapeConfigurator?
 
-    public init() {
-        self.color = nil
-        self.shape = nil
-    }
+    public init() { }
 
     public enum CodingKeys: String, CodingKey {
         case color
@@ -31,23 +34,29 @@ open class BaseUIConfigurator: Decodable {
 
 
 extension BaseUIConfigurator: Colorable {
+
     public var backgroundColor: UIColor {
         get {
-            guard let bgHex = color?.backgroundHex else { return .red }
+            guard let bgHex = color?.backgroundHex else { return .clear }
             return bgHex.UIColor
         }
     }
 
     public var textColor: UIColor {
         get {
-            guard let txtHex = color?.textHex else { return .white }
+            guard let txtHex = color?.textHex else { return .black }
             return txtHex.UIColor
         }
     }
 
     public var borderColor: UIColor {
-        guard let brdHex = color?.borderHex else { return .white }
+        guard let brdHex = color?.borderHex else { return .clear }
         return brdHex.UIColor
+    }
+
+    public var placeholderColor: UIColor {
+        guard let _placeholderHex = color?.placeholderHex else { return .blue }
+        return _placeholderHex.UIColor
     }
 }
 
@@ -74,12 +83,14 @@ public struct ColorConfigurator: Decodable {
     public var textHex: String?
     public var borderHex: String?
     public var shadowHex: String?
+    public var placeholderHex: String?
 
     public enum CodingKeys: String, CodingKey {
         case backgroundHex = "background"
         case textHex = "text"
         case borderHex = "border"
         case shadowHex = "shadow"
+        case placeholderHex = "placeholder"
     }
 
     public init(from decoder: Decoder) throws {
@@ -88,6 +99,7 @@ public struct ColorConfigurator: Decodable {
         textHex = try container.decodeIfPresent(String.self, forKey: .textHex)
         borderHex = try container.decodeIfPresent(String.self, forKey: .borderHex)
         shadowHex = try container.decodeIfPresent(String.self, forKey: .shadowHex)
+        placeholderHex = try container.decodeIfPresent(String.self, forKey: .placeholderHex)
     }
 }
 

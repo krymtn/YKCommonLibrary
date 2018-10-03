@@ -13,9 +13,5 @@ import YKCommonLibrary
 class YKBaseButton: BaseButton {
 
     override func appStyling() {
-//        let path : String = Bundle.main.path(forResource: "YKButtonConfig", ofType: "json")!
-//        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-//        let configurator = try! JSONDecoder().decode(BaseButtonConfigurator.self, from: data)
-//        self.configurator = configurator
     }
 }

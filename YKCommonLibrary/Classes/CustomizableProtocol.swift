@@ -20,6 +20,7 @@ public protocol Colorable {
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
     var borderColor: UIColor { get }
+    var placeholderColor: UIColor { get }
 }
 
 public protocol Shapeable {

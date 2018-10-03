@@ -12,7 +12,7 @@ import YKCommonLibrary
 
 class YKBaseView: BaseView {
     
-   /* override func appStyling() {
-       //self.view.backgroundColor = .yellow
-    }*/
+    override func appStyling() {
+       self.view.backgroundColor = .yellow
+    }
 }

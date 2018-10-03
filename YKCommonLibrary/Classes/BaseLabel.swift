@@ -9,7 +9,7 @@
 import UIKit
 
 /// Thin Label declaration
-open class ThinLabel: UILabel, StyleProtocol, CustomizableProtocol {
+open class ThinLabel: UILabel, CustomizableProtocol {
 
     public var configurator = LabelConfigurator()
 
@@ -35,7 +35,7 @@ open class ThinLabel: UILabel, StyleProtocol, CustomizableProtocol {
 }
 
 /// Regular Label declaration
-open class RegularLabel: UILabel, StyleProtocol {
+open class RegularLabel: UILabel, CustomizableProtocol {
 
     public var configurator = LabelConfigurator()
 
@@ -61,7 +61,7 @@ open class RegularLabel: UILabel, StyleProtocol {
 }
 
 /// Bold Label declaration
-open class BoldLabel: UILabel, StyleProtocol {
+open class BoldLabel: UILabel, CustomizableProtocol {
 
     public var configurator = LabelConfigurator()
 

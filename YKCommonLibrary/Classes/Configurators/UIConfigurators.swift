@@ -55,15 +55,15 @@ extension BaseUIConfigurator: Colorable {
     }
 
     public var placeholderColor: UIColor {
-        guard let _placeholderHex = color?.placeholderHex else { return .blue }
+        guard let _placeholderHex = color?.placeholderHex else { return .lightGray }
         return _placeholderHex.UIColor
     }
 }
 
 extension BaseUIConfigurator: Shapeable {
-    public var font: UIFont {
-        guard let fontname = shape?.fontValue, let customFont = UIFont.init(name: fontname, size: 14) else { return UIFont.systemFont(ofSize: 14) }
-        return customFont
+    public var font: String? {
+        guard let fontname = shape?.fontName else { return nil }
+        return fontname
     }
 
     public var cornerRadius: CGFloat {
@@ -107,19 +107,19 @@ public struct ShapeConfigurator: Decodable {
 
    public var borderWidthValue: Float?
    public var cornerRadiusValue: Float?
-   public var fontValue: String?
+   public var fontName: String?
 
     public enum CodingKeys: String, CodingKey {
         case borderWidthValue = "borderWidth"
         case cornerRadiusValue = "cornerRadius"
-        case fontValue = "font"
+        case fontName = "font"
     }
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         borderWidthValue = try container.decodeIfPresent(Float.self, forKey: .borderWidthValue)
         cornerRadiusValue = try container.decodeIfPresent(Float.self, forKey: .cornerRadiusValue)
-        fontValue = try container.decodeIfPresent(String.self, forKey: .fontValue)
+        fontName = try container.decodeIfPresent(String.self, forKey: .fontName)
     }
 }
 

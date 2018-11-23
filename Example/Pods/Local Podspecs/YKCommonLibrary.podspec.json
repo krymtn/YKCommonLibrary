@@ -1,6 +1,6 @@
 {
   "name": "YKCommonLibrary",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "YKCommonLibrary created by krymtn",
   "swift_version": "4.1",
   "description": "A short description of YKCommonLibrary.A short description of YKCommonLibrary.A short description of YKCommonLibrary.",
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/krymtn/YKCommonLibrary.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0"

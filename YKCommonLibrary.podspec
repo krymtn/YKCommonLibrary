@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YKCommonLibrary'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'YKCommonLibrary created by krymtn'
   s.swift_version    = '4.1'
 
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = "A short description of YKCommonLibrary.A short description of YKCommonLibrary.A short description of YKCommonLibrary."
+  s.description      = "Modified UI objects and colors.Modified UI objects and colors.Modified UI objects and colors."
 
   s.homepage         = 'https://github.com/krymtn/YKCommonLibrary'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

@@ -35,8 +35,6 @@ open class BaseButton: UIButton, CustomizableProtocol {
 
     open func setup() {
 
-        self.titleLabel!.font = configurator.font
-
         self.layer.masksToBounds = true
         self.layer.cornerRadius  = configurator.cornerRadius
         self.layer.borderWidth = configurator.borderWidth

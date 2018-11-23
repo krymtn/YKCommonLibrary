@@ -1,7 +1,7 @@
 {
     "thin": {
         "color": {
-            "text": "DDDDDD"
+            "text": "DEDEDE"
         },
         "shape": {
             "font": null
@@ -12,7 +12,7 @@
             "text": "612345"
         },
         "shape": {
-            "font": "Kefa"
+            "font": null
         }
     },
     "bold": {
@@ -20,7 +20,7 @@
             "text": "FFFFFF"
         },
         "shape": {
-            "font": "Futura"
+            "font": null
         }
     },
     "block": {

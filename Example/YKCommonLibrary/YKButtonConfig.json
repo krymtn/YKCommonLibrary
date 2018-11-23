@@ -1,10 +1,11 @@
 {
     "color": {
-        "background": "F39203",
-        "text": "000000",
+        "background": "000000",
+        "text": "FFFFFF",
         "border": "555555"
     },
     "shape": {
+        "font": "BradleyHandITCTT-Bold",
         "borderWidth": 2.0,
         "cornerRadius": 7.5
     }

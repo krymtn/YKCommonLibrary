@@ -50,7 +50,7 @@ class ConfiguratorTests: QuickSpec {
             it("labels config not to be nil") {
                 expect(configurator.thin?.color?.textHex).notTo(beNil())
                 expect(configurator.regular?.color?.textHex).notTo(beNil())
-                expect(configurator.bold?.shape?.fontValue).to(beNil())
+                expect(configurator.bold?.shape?.fontName).to(beNil())
             }
         }
     }

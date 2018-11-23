@@ -26,5 +26,5 @@ public protocol Colorable {
 public protocol Shapeable {
     var cornerRadius: CGFloat { get }
     var borderWidth: CGFloat { get }
-    var font: UIFont { get }
+    var font: String? { get }
 }

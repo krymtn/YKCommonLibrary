@@ -26,7 +26,6 @@ open class ThinLabel: UILabel, CustomizableProtocol {
     }
 
     open func setup() {
-        self.font = configurator.font
         self.textColor = configurator.textColor
         self.backgroundColor = configurator.backgroundColor
     }
@@ -52,7 +51,6 @@ open class RegularLabel: UILabel, CustomizableProtocol {
     }
 
     open func setup() {
-        self.font = configurator.font
         self.textColor = configurator.textColor
         self.backgroundColor = configurator.backgroundColor
     }
@@ -78,7 +76,6 @@ open class BoldLabel: UILabel, CustomizableProtocol {
     }
 
     open func setup() {
-        self.font = configurator.font
         self.textColor = configurator.textColor
         self.backgroundColor = configurator.backgroundColor
     }

@@ -36,6 +36,9 @@
 		FA802F9C21538D2200B4A21F /* YKBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA802F9B21538D2200B4A21F /* YKBaseButton.swift */; };
 		FA91A6022152596500FDA55B /* BaseButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C8659215258BB00727908 /* BaseButtonTests.swift */; };
 		FA91A60421525C0F00FDA55B /* BaseLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91A60321525C0F00FDA55B /* BaseLabelTests.swift */; };
+		FA933CB721A84755001B84A0 /* YKTextViewConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = FA933CB621A84755001B84A0 /* YKTextViewConfig.json */; };
+		FA933CB921A8477A001B84A0 /* YKBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A200C215523CE006D1392 /* YKBaseLabel.swift */; };
+		FA933CBB21A84796001B84A0 /* YKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA933CBA21A84796001B84A0 /* YKTextView.swift */; };
 		FABBCB2721537C3E000E7209 /* YKBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBCB2621537C3E000E7209 /* YKBaseView.swift */; };
 		FABBCB2921537CBA000E7209 /* YKBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABBCB2821537CBA000E7209 /* YKBaseView.xib */; };
 		FAE773592155C121009EFB13 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE773582155C121009EFB13 /* AppConfigurator.swift */; };
@@ -90,6 +93,8 @@
 		FA77F44C215375D100E81DB5 /* BaseViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTests.swift; sourceTree = "<group>"; };
 		FA802F9B21538D2200B4A21F /* YKBaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseButton.swift; sourceTree = "<group>"; };
 		FA91A60321525C0F00FDA55B /* BaseLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabelTests.swift; sourceTree = "<group>"; };
+		FA933CB621A84755001B84A0 /* YKTextViewConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = YKTextViewConfig.json; sourceTree = "<group>"; };
+		FA933CBA21A84796001B84A0 /* YKTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKTextView.swift; sourceTree = "<group>"; };
 		FABBCB2621537C3E000E7209 /* YKBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YKBaseView.swift; sourceTree = "<group>"; };
 		FABBCB2821537CBA000E7209 /* YKBaseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YKBaseView.xib; sourceTree = "<group>"; };
 		FAE773582155C121009EFB13 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
@@ -149,14 +154,11 @@
 		607FACD21AFB9204008FA782 /* Example for YKCommonLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FA933CB821A8476D001B84A0 /* CustomUI */,
+				FA51FE0E215419BC004E9970 /* ConfigFiles */,
 				FA5D8C322163AD8100DB5006 /* Controllers */,
 				FA5D8C2C2163A88800DB5006 /* Views */,
 				FA5D8C272163948200DB5006 /* Models */,
-				FA5A201421555C6B006D1392 /* YKTextField */,
-				FA5A200B215523A6006D1392 /* YKBaseLabel */,
-				FA51FE0E215419BC004E9970 /* ConfigFiles */,
-				FA802F9A21538D1000B4A21F /* YKBaseButton */,
-				FABBCB2521537BFD000E7209 /* YKBaseView */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				FAE773582155C121009EFB13 /* AppConfigurator.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -230,28 +232,13 @@
 			name = ConfigFiles;
 			sourceTree = "<group>";
 		};
-		FA5A200B215523A6006D1392 /* YKBaseLabel */ = {
-			isa = PBXGroup;
-			children = (
-				FA5A200C215523CE006D1392 /* YKBaseLabel.swift */,
-			);
-			name = YKBaseLabel;
-			sourceTree = "<group>";
-		};
-		FA5A201421555C6B006D1392 /* YKTextField */ = {
-			isa = PBXGroup;
-			children = (
-				FA5A201521555C8C006D1392 /* YKTextField.swift */,
-			);
-			name = YKTextField;
-			sourceTree = "<group>";
-		};
 		FA5D8C222163907900DB5006 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				FA51FE0F21541A0A004E9970 /* YKButtonConfig.json */,
 				FA5A200921551AB2006D1392 /* YKLabelConfig.json */,
 				FA5A201221555C25006D1392 /* YKTextFieldConfig.json */,
+				FA933CB621A84755001B84A0 /* YKTextViewConfig.json */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -298,12 +285,16 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		FA802F9A21538D1000B4A21F /* YKBaseButton */ = {
+		FA933CB821A8476D001B84A0 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				FABBCB2521537BFD000E7209 /* YKBaseView */,
 				FA802F9B21538D2200B4A21F /* YKBaseButton.swift */,
+				FA5A200C215523CE006D1392 /* YKBaseLabel.swift */,
+				FA5A201521555C8C006D1392 /* YKTextField.swift */,
+				FA933CBA21A84796001B84A0 /* YKTextView.swift */,
 			);
-			name = YKBaseButton;
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 		FABBCB2521537BFD000E7209 /* YKBaseView */ = {
@@ -345,7 +336,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				BC0912EABF1AEBFA3BE400A5 /* [CP] Embed Pods Frameworks */,
+				9C374093E679D93DD735C8CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,7 +355,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -404,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				FA933CB721A84755001B84A0 /* YKTextViewConfig.json in Resources */,
 				FA5D8C312163A8AF00DB5006 /* SplashView.xib in Resources */,
 				FA5A201321555C25006D1392 /* YKTextFieldConfig.json in Resources */,
 				FA51FE1021541A0A004E9970 /* YKButtonConfig.json in Resources */,
@@ -466,7 +458,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC0912EABF1AEBFA3BE400A5 /* [CP] Embed Pods Frameworks */ = {
+		9C374093E679D93DD735C8CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,6 +469,7 @@
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -515,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA933CBB21A84796001B84A0 /* YKTextView.swift in Sources */,
 				FAE773592155C121009EFB13 /* AppConfigurator.swift in Sources */,
 				FA5D8C342163ADA000DB5006 /* SplashVC.swift in Sources */,
 				FA5A200D215523CE006D1392 /* YKBaseLabel.swift in Sources */,
@@ -534,6 +528,7 @@
 			files = (
 				FA43A92A215A57EB00407391 /* ConfigurationJSONTests.swift in Sources */,
 				FA16F341215644050051154B /* AppConfigurator.swift in Sources */,
+				FA933CB921A8477A001B84A0 /* YKBaseLabel.swift in Sources */,
 				FAE7735B2155C14A009EFB13 /* AppConfiguratorTests.swift in Sources */,
 				FA91A6022152596500FDA55B /* BaseButtonTests.swift in Sources */,
 				FA91A60421525C0F00FDA55B /* BaseLabelTests.swift in Sources */,
@@ -589,12 +584,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -642,12 +639,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -691,7 +690,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -710,7 +709,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
